@@ -16,7 +16,7 @@ const register = () => {
         try {
             // console.log({ name, email, password });
             setLoading(true);
-            const { data } = await axios.post(`${process.env.NEXT_PUBLIC_API}/register`, { name, email, password });
+            const { data } = await axios.post(`/api/register`, { name, email, password });
             // console.log("Register response", data);
             toast.success("Register successfully,Please login");
             setLoading(false);
